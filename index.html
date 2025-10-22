@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청담 샤브 - 샤브샤브 정식 1인 19,000원</title>
+    <!-- Tailwind CSS CDN 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 'Inter' 폰트를 기본으로 사용하며, 한국어 폰트가 없을 경우 다른 폰트 사용 */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-4xl w-full space-y-12 bg-white p-8 sm:p-12 rounded-2xl shadow-2xl border border-gray-100 transform transition duration-500 hover:shadow-3xl">
+        
+        <!-- 헤더 섹션 -->
+        <header class="text-center">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+                [청담 샤브] 샤브샤브 정식 특가!
+            </h1>
+            <p class="text-xl text-red-600 font-bold">
+                ✨ 1인 19,000원! 신선함과 든든함을 한 번에!
+            </p>
+        </header>
+
+        <!-- 비디오 플레이어 섹션 -->
+        <section class="video-container">
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border-4 border-red-500/50">
+                <!-- 
+                    사용자님이 업로드하신 'vid01.mp4' 파일의 경로를 사용합니다.
+                    'autoplay'와 'loop', 'playsinline'은 비디오 재생의 호환성을 높입니다.
+                    onerror: 비디오 로드에 실패할 경우, 비디오 요소를 명확한 오류 메시지로 대체합니다. (수정된 부분)
+                -->
+                <video 
+                    id="shabuVideo" 
+                    controls 
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                    class="w-full h-full object-cover bg-gray-200"
+                    poster="https://placehold.co/800x450/f97316/ffffff?text=Video+Preview:+Cheongdam+Shabu"
+                    onerror="this.outerHTML = '<div class=\'flex items-center justify-center h-full w-full bg-red-100 p-8 text-red-700 font-bold text-center\'>⚠️ 비디오 재생에 실패했습니다.<br>파일 경로(vid01.mp4)를 다시 확인해 주세요.</div>';"
+                >
+                    <!-- 
+                        !!! 'vid01.mp4' 파일 경로 적용 완료 !!! 
+                    -->
+                    <source src="vid01.mp4" type="video/mp4">
+                    <p class="text-center text-lg text-gray-700 p-4">
+                        브라우저가 비디오 태그를 지원하지 않거나, 파일 경로(`vid01.mp4`)를 찾을 수 없습니다.
+                    </p>
+                </video>
+            </div>
+            <p class="mt-4 text-center text-sm text-gray-500">
+                👆 영상을 통해 1등급 한우와 신선한 채소의 완벽한 조화를 확인하세요.
+            </p>
+        </section>
+
+        <!-- 주요 특징 섹션 (비디오 내용 기반 업데이트) -->
+        <section class="features mt-10">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">
+                청담 샤브의 세 가지 약속
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- 특징 1: 1등급 한우 -->
+                <div class="p-6 bg-red-50 rounded-lg shadow-md text-center">
+                    <div class="text-2xl text-red-600 mb-3">🥇</div>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">1등급 한우 사용</h3>
+                    <p class="text-gray-600 text-sm">마블링이 선명한 최상급 한우만 엄선하여 사용합니다.</p>
+                </div>
+                <!-- 특징 2: 신선한 채소 (산지 직송) -->
+                <div class="p-6 bg-red-50 rounded-lg shadow-md text-center">
+                    <div class="text-2xl text-red-600 mb-3">🥬</div>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">매일 산지 직송 채소</h3>
+                    <p class="text-gray-600 text-sm">신선함 그대로, 아침에 바로 온 싱싱한 채소.</p>
+                </div>
+                <!-- 특징 3: 육수 -->
+                <div class="p-6 bg-red-50 rounded-lg shadow-md text-center">
+                    <div class="text-2xl text-red-600 mb-3">🍲</div>
+                    <h3 class="font-semibold text-lg mb-2 text-gray-800">진하고 깔끔한 육수</h3>
+                    <p class="text-gray-600 text-sm">오직 청담 샤브만의 깊고 개운한 육수 비법.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 콜 투 액션 (CTA) 버튼 및 가격 정보 -->
+        <div class="text-center mt-12">
+            <p class="text-2xl font-extrabold text-red-700 mb-4 bg-yellow-100 p-2 rounded-lg inline-block">
+                샤브샤브 정식 1인 19,000원!
+            </p>
+            <a href="tel:02-345-7890" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full shadow-xl text-white bg-red-600 hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50 group">
+                <span class="mr-2">📞</span>
+                지금 전화로 예약하기 (02-345-7890)
+                <span class="ml-2 group-hover:animate-pulse">▶</span>
+            </a>
+            <p class="mt-3 text-sm text-gray-500 font-medium">전화 예약 시, 대기 시간 없이 바로 입장 가능합니다.</p>
+        </div>
+
+        <!-- 푸터/연락처 정보 -->
+        <footer class="text-center text-gray-500 text-sm pt-8 border-t border-gray-200 mt-10">
+            <p>청담 샤브 (Fresh Shabu House)</p>
+            <p>예약 문의: 02-345-7890 | 영업시간: 매일 11:00 ~ 22:00</p>
+            <p class="mt-1">&copy; 2025 Cheongdam Shabu. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
